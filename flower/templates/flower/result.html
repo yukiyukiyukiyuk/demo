@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <title>Infectious AI</title> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+
+  <body>
+     <body>
+
+      <main>
+        <header>
+          <h1 id="logo"><a href="home.html"><img src="{% static 'images/logo_doshisha.png' %}" alt="Tissue Engineering"></a></h1>
+        </header>
+
+
+        <div class="wrapper">
+          <h2 class="title">Infectious AI</h2>
+          <div class="container">
+            <h1 class="title-1">AIによる予測</h1>
+            <img src="{{ now_image.picture.url }}" width="200" />
+            <h2>「{{ now_image.first_name }}」と予測されました</h2>
+            <h1 class="title-2">病原体予測確率</h1>
+            <div class="bar-container">
+              <h3>
+                {{ now_image.first_name }}<br />
+                {{ now_image.first_value }}%
+              </h3>
+              <div class="bar">
+                <div class="bar-fill" style="width: {{ now_image.first_value }}%;"></div>
+              </div>
+            </div>
+            <div class="bar-container">
+              <h3>
+                {{ now_image.second_name }}<br />
+                {{ now_image.second_value }}%
+              </h3>
+              <div class="bar">
+                <div class="bar-fill" style="width: {{ now_image.second_value }}%;"></div>
+              </div>
+            </div>
+            <div class="bar-container">
+              <h3>
+                {{ now_image.third_name }}<br />
+                {{ now_image.third_value }}%
+              </h3>
+              <div class="bar">
+                <div class="bar-fill" style="width: {{ now_image.third_value }}%;"></div>
+              </div>
+            </div>
+            <div class="bar-container">
+              <h3>
+                {{ now_image.fourth_name }}<br />
+                {{ now_image.fourth_value }}%
+              </h3>
+              <div class="bar">
+                <div class="bar-fill" style="width: {{ now_image.fourth_value }}%;"></div>
+              </div>
+            </div>
+      
+            <br />
+            <a href="{% url 'flower:upload' %}">Upload more</a>
+            <br />
+          </div>
+
+          
+
+
+
+        </div>
+      </main>
+
+
+    
+  </body>
+
+
+    

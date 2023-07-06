@@ -1,0 +1,195 @@
+/* styles.css */
+/* ここ帰る */
+body {
+	font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial",sans-serif;
+	-webkit-text-size-adjust: none;
+	background: #202124;
+	color: #351F65;		/*全体の文字色*/
+	
+  width: 100%;
+  
+}
+
+/*メインイメージ
+---------------------------------------------------------------------------*/
+/* #mainimg {
+	text-indent: -9999px;
+	position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+	width: 100%;
+	height: 300px;
+	background: url(../images/main_bg.jpg) no-repeat center center / cover;
+} */
+
+/*ヘッダー
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+
+
+/*ロゴ画像*/
+header #logo img {
+	width:32px;		/*幅*/
+}
+
+  
+  h2 {
+    color: #000000;
+  }
+  
+  h1 {
+    color: #000000;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #636367;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+
+  main{
+    max-width: 480px;
+    background-color: #fbfbfb;
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+  main .img {
+    width: 100%;
+  }
+
+  header {
+    max-width: 480px;
+    background-color: #F3F3F6;
+    /* width: 100%; */
+    padding: 12px 4px ;
+    /* margin: 0 auto; */
+  }
+  main .wrapper {
+    padding: 20px 12px;
+    /* margin: 20px 0; */
+    background-color: #F3F3F6;
+    text-align: center;
+  }
+  main .box {
+    text-align: center; 
+    max-width: 400px;
+    margin: auto;
+    /* width: 80%; */
+  }
+  main .box .title{
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  main .box p{
+    /* font-weight: bold; */
+    font-size: 1rem;
+    line-height: 1.6rem;		/*行間*/
+  }
+  main .title {
+    font-size:1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  /* 次のページ */
+  main .container {
+    /* max-width: 480px; */
+    width: 100%;
+    margin-top: 50px;
+    margin: auto;
+    background-color: #F3F3F6;
+  }
+  main .container .title-1{
+    font-size:1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  main .container .title-2 {
+    font-size:1.6rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  main .container img {
+    
+    margin-bottom: 20px;
+  }
+  main .container h2 {
+    font-size:1.2rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+
+  .bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* マージン修正 */
+    text-align: left;
+    
+  }
+
+  .bar {
+    flex: 1;
+    height: 20px;
+    background-color: lightgray;
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px; /* マージン修正 */
+    /* max-width: 40%; */
+  }
+
+  .bar-fill {
+    height: 100%;
+    background-color: #2b8fe1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: bar-fill-animation 2s ease-out;
+  }
+
+  h3 {
+    display: flex; /* 追加 */
+    /* align-items: center; 追加 */
+    font-size:1rem;
+    font-weight: bold;
+    
+
+  }
+
+  @keyframes bar-fill-animation {
+    0% {
+      width: 0;
+    }
+  }
+
+
+
+
+
+
+  

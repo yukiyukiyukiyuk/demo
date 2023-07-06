@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <meta charset="utf-8" />
+    <title>Infectious AI</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+
+  <body>
+    <!-- <aside id="mainimg">main page</aside> -->
+
+
+
+    <main>
+      <header>
+        <h1 id="logo"><a href="home.html"><img src="{% static 'images/logo_doshisha.png' %}" alt="Tissue Engineering"></a></h1>
+      </header>
+      <div class="wrapper">
+        <h2 class="title">AI for Infectious Keratitis</h2>
+        <img class="img" src="{% static 'images/demo.png' %}" alt="">
+        <div class="box">
+          <!-- <h2 class="title">AI for Infectious Keratitis</h2> -->
+          <!-- <p>
+            Infectious AI は、感染症の診断を手軽に行うためのアプリです。選んだ画像を利用し、AIが迅速かつ正確に感染症を診断します。
+            診断したい画像をアップロードしてみましょう。
+          </p> -->
+          <form
+            enctype="multipart/form-data"
+            action="{% url 'flower:upload' %}"
+            method="POST"
+          >
+            {% csrf_token %} {{form.as_p}}
+            <br />
+            <button type="submit">Upload</button>
+
+
+        </div>
+        
+          <!-- <a href="{% url 'flower:showall' %}">過去の結果一覧を見る</a> -->
+        </form>
+      </div>
+      
+    </main>
+  </body>
+</html>

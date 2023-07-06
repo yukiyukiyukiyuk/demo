@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Infection AI</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+
+  <body>
+
+    
+
+    <main>
+    <h1>過去の結果一覧</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>画像 \ 確率</th>
+          <th>1st</th>
+          <th>2nd</th>
+          <th>3rd</th>
+          <th>4th</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for image in images %}
+        <tr>
+          <th><img src="{{ image.picture.url }}" height="70" /></th>
+          <td>
+            <h3>
+              {{ image.first_name }}<br />
+              {{ image.first_value }}%
+            </h3>
+          </td>
+          <td>
+            <h3>
+              {{ image.second_name }}<br />
+              {{ image.second_value }}%
+            </h3>
+          </td>
+          <td>
+            <h3>
+              {{ image.third_name }}<br />
+              {{ image.third_value }}%
+            </h3>
+          </td>
+          <td>
+            <h3>
+              {{ image.fourth_name }}<br />
+              {{ image.fourth_value }}%
+            </h3>
+          </td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br />
+    <a href="{% url 'flower:upload' %}">Upload more</a>
+    <br />
+  </main>
+  </body>
+</html>
